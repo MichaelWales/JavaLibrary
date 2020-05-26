@@ -49,9 +49,9 @@ public class LibraryTest {
     }
 
     @Test
-    public void canRemoveBookFromCollection() {
+    public void canLendBook() {
         library.addBook(book1);
-        library.removeBook();
+        library.lendBook(book1);
         assertEquals(0, library.bookCount());
     }
 
