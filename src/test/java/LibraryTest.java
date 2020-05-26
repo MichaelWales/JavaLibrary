@@ -32,4 +32,20 @@ public class LibraryTest {
         assertEquals(4, library.getCapacity());
     }
 
+    @Test
+    public void canAddBookToCollection() {
+        library.addBook(book1);
+        assertEquals(1, library.bookCount());
+    }
+
+    @Test
+    public void cannotAddBookToCollection() {
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        library.addBook(book4);
+        library.addBook(book5);
+        assertEquals(4, library.bookCount());
+    }
+
 }
