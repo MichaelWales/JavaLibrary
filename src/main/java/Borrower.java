@@ -10,16 +10,16 @@ public class Borrower {
         this.borrowedBooks = new ArrayList<Book>();
     }
 
-    public void borrowBookFromLibrary(Library library) {
-        Book book = library.lendBook();
-        this.borrowedBooks.add(book);
+    public String getName() {
+        return name;
     }
 
-    public int numberOfBorrowedBooks() {
+    public int bookCount() {
         return this.borrowedBooks.size();
     }
 
-    public void returnBookToLibrary(Book book) {
-        this.borrowedBooks.clear();
+    public void addBook(Book book) {
+        this.borrowedBooks.add(book);
     }
+
 }
